@@ -1,0 +1,12 @@
+.chart-bg-container{
+    background-color:  #1c1c2b;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+.chart-heading{
+    color: #cbd5e1;
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: 500;
+}
+
