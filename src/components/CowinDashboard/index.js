@@ -28,8 +28,8 @@ class CowinDashboard extends Component {
 
   fetchVaccinationData = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
-    const apiUrl = 'https://apis.ccbp.in/covid-vaccination-data'
-    const response = await fetch(apiUrl, {method: 'GET'})
+    const vaccinationDataApiUrl = 'https://apis.ccbp.in/covid-vaccination-data'
+    const response = await fetch(vaccinationDataApiUrl)
 
     if (response.ok === true) {
       const data = await response.json()
@@ -41,7 +41,6 @@ class CowinDashboard extends Component {
 
       const vaccinationByAgeData = data.vaccination_by_age
       const vaccinationByGenderData = data.vaccination_by_gender
-      console.log(last7DaysData, vaccinationByAgeData, vaccinationByGenderData)
 
       this.setState({
         last7DaysData,

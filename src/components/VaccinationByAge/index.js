@@ -20,7 +20,7 @@ const VaccinationByAge = props => {
             cx="50%"
             cy="40%"
             data={vaccinationByAgeData}
-            outerRadius="70%"
+            outerRadius="60%"
             dataKey="count"
             nameKey="age"
           >
@@ -28,7 +28,10 @@ const VaccinationByAge = props => {
             <Cell fill="#a3df9f" />
             <Cell fill="#64c2a6" />
           </Pie>
-          <Legend iconType="circle" />
+          <Legend
+            iconType="circle"
+            wrapperStyle={{fontSize: 12, fontFamily: 'Roboto'}}
+          />
           <Tooltip />
         </PieChart>
       </ResponsiveContainer>

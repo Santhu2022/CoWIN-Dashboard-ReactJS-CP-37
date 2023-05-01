@@ -18,12 +18,12 @@ const VaccinationByGender = props => {
         <PieChart>
           <Pie
             cx="50%"
-            cy="40%"
+            cy="60%"
             data={vaccinationByGenderData}
             startAngle={180}
             endAngle={0}
-            innerRadius="40%"
-            outerRadius="70%"
+            innerRadius="30%"
+            outerRadius="60%"
             dataKey="count"
             nameKey="gender"
           >
@@ -31,7 +31,13 @@ const VaccinationByGender = props => {
             <Cell fill="#5a8dee" />
             <Cell fill="#2cc6c6" />
           </Pie>
-          <Legend iconType="circle" />
+          <Legend
+            iconType="circle"
+            wrapperStyle={{
+              fontFamily: 'Roboto',
+              fontSize: 12,
+            }}
+          />
           <Tooltip />
         </PieChart>
       </ResponsiveContainer>
